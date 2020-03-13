@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<script>
+    /*
+    switch (new Date().getDay()) {
+    case 0:
+        day= 'Sunday';
+        break;
+
+        case 1:
+            day= 'Monday';
+            break;
+        case 2:
+            day= 'Tuesday';
+            break;
+        case 3:
+            day= 'Wednesday';
+            break;
+        case 4:
+            day= 'Thursday';
+            break;
+        case 5:
+            day= 'Friday';
+            break;
+        case 6:
+            day= 'Saturday';
+            break;
+    }
+    console.log(day);
+
+
+    var person={
+        firstName: 'Bilbo',
+        secondName: 'begins',
+        age: 20,
+        eyeColor:  'blue'
+    };
+    var text='';
+    var x;
+    for (x in person){
+        text+=person[x];
+    }
+
+    console.log(text);
+
+
+
+    var x=prompt('Введите число: ');
+
+    if(x>=0){
+        console.log('Число положительное');
+    }else {
+        console.log('Число отрицательное');
+    }
+
+//Вывести числа больше или равно 50
+    var numbers=[254,115,78,25,91,45,37];
+var numbersplus=[];
+    function workModel() {
+        numbers.pop(),
+        numbers.reverse(),
+        numbers.push(50)
+
+    };
+    workModel();
+    console.log(numbers);
+
+    function work() {
+        for(var i=0;i<numbers.length;i++){
+            if(numbers[i]>=50){
+                console.log('Число: '+numbers[i]+'больше или равно 50!');
+                numbersplus.push(numbers[i]);
+            }else {
+                console.log('Число: '+numbers[i]+' не больше или не равно 50!');
+            }
+        }
+    };
+    work();
+
+    console.log(numbersplus);
+
+
+//Вывести числа которые кратны 5
+    let arr=[5,7,10,15,17,20,25,30,35,40,45,43,50];
+let arrtop=[];
+    function work1() {
+
+        for (var i=0;i<arr.length;i++){
+
+            if(arr[i]%5 === 0){
+                console.log('Число: '+arr[i]+'остаток при делении на 5 равен 0');
+                arrtop.push(arr[i]);
+            }else {
+                console.log('Число: '+arr[i]+'остаток при делении на 5  не равен 0')
+            }
+        }
+
+    };
+
+    work1();
+
+    console.log(arrtop);
+
+
+
+*/
+
+//Вложенность вопросов
+    /*var fun= prompt('Кто пришел?');
+    if (fun==''){
+        alert('Вход отменен!');
+    }else if(fun=='PHP'){
+        alert('Нет не стоит!');
+    }else if(fun=='JavaScript'){
+        var a= prompt('Введите пароль');
+        if (a==''){
+            alert('Вход отменен');
+        }else if(a=='Не важно что'){
+            alert('пароль не верен');
+        }else if(a=='ECMA'){
+            alert('Добро пожаловать');
+        }
+    }
+*/
+//1-вывести массив наоборот
+    var array=[1,2,3,4,5,6,7,8,9,10];
+
+    function count() {
+        array.reverse();
+    }
+    count();
+    console.log('Обратный массив: '+array);
+    
+//2- поиск эллемента в массиве повторяющеегося два и более раз и вывести его
+    var array1=[2,4,5,6,787,3,2,3,4,5,6,7,3,4,5,6];
+
+    function same(array1) {
+        array1.sort();
+        array1_res=[];
+        for (var i=0;i<array1.length;i++){
+            if (array1[i]==array1[i-1]){
+                var noRepeat=true;
+                for (var j=0;j<array1_res.length;j++){
+                    if(array1_res[j]==array1[i]){
+                        noRepeat=false;
+                        break;
+                    }
+                }
+                if ( noRepeat){
+                    array1_res.push(array1[i]);
+                }
+            }
+        }
+        return array1_res;
+
+    }
+
+    console.log(array1);
+    console.log(same(array1));
+
+//3- поиск самого маленького нечетного числа и вывод
+    var a = [100,61,2,67,-30,12,-77,100,126,-102,6];
+    var b=[];
+
+    for (var j=0;j<a.length;j++){
+        if(a[j]%2!=0){
+            b.push(a[j]);
+        }
+    }
+    var a_min = b[0];
+    for (var i = 1; i < b.length; i++) {
+        if (b[i] <= a_min) {
+            a_min = b[i];
+        }
+    }
+    console.log("Минимальное значение = " + a_min);
+
+
+    //4- среднего аррифметического значения
+    var c=[1,2,3,4,5,6,7,8,9,10];
+    var summa=0;
+    var dlinna=c.length;
+
+    for (var i=0;i<c.length;i++){
+        summa+=c[i];
+    }
+    console.log('Summa elementov massiva: '+summa);
+    console.log('Среднее арифметическое значение: '+(summa/dlinna));
+
+
+    //5/6 число положительных/отрицательных эллементов массива
+    var o=[1,9,8,7,65,-3,-5,-8,4,5,6,0];
+    var counterPlus=0;
+    var summaryPlus=0;
+var counterMinus=0;
+    var summaryMinus=0;
+    for(var i =0; i<o.length;i++){
+        var plusovoe= (o[i]>=0)?true:false;
+        if (plusovoe){
+            counterPlus++;
+            summaryPlus+=o[i];
+        }else {
+            counterMinus++;
+            summaryMinus+=o[i];
+        }
+    }
+    console.log('Число положительных эллементов: '+ counterPlus);
+    console.log('Сумма положительных элементов массива: '+summaryPlus);
+
+    console.log('Число отрицательных эллементов: '+ counterMinus);
+    console.log('Сумма отрицательных элементов массива: '+summaryMinus);
+
+    //7-число минимальных эллементов
+    var p=[100,2,3,4,5,3,2,1,3,5,7,8,9,-3,-3,5,4,123];
+    var counterMinEl=0;
+    var miniElement=p[0];
+    var summaryMinEl=0;
+for (var i=0;i<p.length;i++){
+    if(p[i]<=miniElement){
+        miniElement=p[i];
+    }
+}
+for (var i=0;i<p.length;i++){
+    if (miniElement==p[i]){
+        counterMinEl++;
+        summaryMinEl+=p[i];
+    }
+}
+console.log('Минимальный элемент массива: '+miniElement);
+console.log('Количество миннимальных эллементов: '+counterMinEl);
+    console.log('Сумма минимальных элементов массива: '+summaryMinEl);
+
+//8-число элементов кратных 7
+    var t=[1,2,3,45,6,7,8,9,3,5,6,7,45,76,7,8,49,0];
+    var counterSeven=0;
+    var summarySeven=0;
+    for (var i=0;i<t.length;i++){
+        if (t[i]%7===0&&t[i]!=0){
+           counterSeven++;
+           summarySeven+=t[i];
+        }
+    }
+    console.log('Число эллементов кратных семи: '+counterSeven);
+    console.log('Сумма кратных 7  элементов массива: '+summarySeven);
+
+    //9- индекс последнего минимального значения
+
+    var y=[99,2,3,4,5,6,7,4,-2,3,34,5,63,-1,-2,5,3,-2,3,3,3];
+    var lastIndexNumber;
+    var minimalElement=y[0];
+    for (var i=0;i<y.length;i++){
+        if (y[i]<=minimalElement){
+            minimalElement=y[i];
+            lastIndexNumber=i;
+        }
+
+    }
+    console.log('Минимальный элемент массива: '+minimalElement);
+    console.log('Индекс минимального значения массива: '+lastIndexNumber);
+
+    //10-индекс первого максимального значения
+
+    var mArray=[1,2,10,3,4,5,10,2,3,4,10];
+    var firstIndexNumber;
+    var maximalEl=mArray[0];
+
+    for (var i=0;i<mArray.length;i++){
+        if (mArray[i]>maximalEl){
+            maximalEl=mArray[i];
+            firstIndexNumber=i;
+        }
+    }
+    console.log('Максимальный эллемент массива: ' + maximalEl);
+    console.log('Индекс максимального значения в массиве: ' + firstIndexNumber);
+
+    //11-число элементов одномерного массива совпадающих с заданным массивом
+    var firstArray=[1,2,3,4,5,6,7,8,9];
+    var secondArray=[1,0,11,2,22,7,33,44,55];
+    var counterSameArray=0;
+    var whatTheSameVal=[];
+    var summarySameArray=0;
+    for (var i=0;i<firstArray.length;i++){
+        for (var j=0;j<secondArray.length;j++){
+            if(firstArray[i]===secondArray[j]){
+                whatTheSameVal.push(secondArray[j]);
+                counterSameArray++;
+                summarySameArray+=secondArray[j];
+            }
+        }
+    }
+    console.log('Совпадающие элементы: '+whatTheSameVal);
+    console.log('Количество совпадающих эллементов: '+counterSameArray);
+    console.log('Сумма совпадающих эллементов: '+summarySameArray);
+
+    //12-есть ли в массиве эллементы значения которых совпадают
+
+    var arr = [1,2,3,4,5,6,7,8,9,1];
+    function duplicate_values(arr)
+    {
+        arr_res = [];
+        arr.sort();
+        for (var i=1; i < arr.length; i++) {
+            if (arr[i] == arr[i-1]) {
+                var is_unique = true;
+                for (var k=0; k < arr_res.length; k++) {
+                    if (arr_res[k] == arr[i]) {
+                        is_unique = false;
+                        break;
+                    }
+                }
+                if (is_unique) {
+                    arr_res.push(arr[i]);
+                }
+            }
+        }
+         if(arr_res!=0){
+             console.log('В массиве есть повторяющийся элемент это: '+arr_res);
+
+         }else{
+             console.log('Повторяющихся элементов нет.');
+         }
+    };
+    duplicate_values(arr);
+
+
+    //13-все ли эллементы массива различны
+    var massiv=[1,2,3,4,5,6,7,81];
+
+    function sortir() {
+        massiv.sort();
+
+        for (var i=1;i<massiv.length;i++){
+            if (massiv[i-1]===massiv[i]){
+                console.log('В массиве есть повторяющийся элемент.');
+
+            }else {
+                console.log('Все эллементы массива различны.');
+
+            }
+        }
+    };
+    sortir();
+
+
+    //14- максимальную по длине неубывающую  последовательность
+
+    var arr = [1,2,3,4,5,0,7,8,9,10,0,1,2,10,20,1,2,3,4,5,6,7,5,4,3,2,1,3,5,6,8,8];
+    function max_sequence(arr) {
+        var seq_arr = [arr[0]];
+        var tmp_arr = [arr[0]];
+
+        for (i = 1; i < arr.length; i++) {//проходим по массиву слева направо
+            if (arr[i] >= arr[i-1]) {
+                tmp_arr.push(arr[i]);
+            } else {
+                if (tmp_arr.length > seq_arr.length) {
+                    seq_arr = tmp_arr;
+                }
+                tmp_arr = [arr[i]];
+            }
+        }
+        if (tmp_arr.length > seq_arr.length) {
+            seq_arr = tmp_arr;
+        }
+        console.log('Длинна максимальной последовательности: '+seq_arr.length);
+        return seq_arr;
+    }
+
+    console.log('Максимальная последовательность: '+max_sequence(arr));
+
+
+
+    //15-обьеденить два упорядоченных массива таким образом чтоб в результирующем массиве все эллементы были различны
+    var odin=[1,2,1];
+    var dva=[1,2,3];
+    var suda=[];
+
+    odin.sort();
+    dva.sort();
+    console.log(odin);
+    console.log(dva);
+
+    for (var i=0;i<odin.length;i++){
+        suda.push(odin[i]);
+    }
+    for (var j=0;j<dva.length;j++){
+        suda.push(dva[j]);
+    }
+    console.log(suda);
+
+    var opa= suda.filter((item,index)=>{
+        console.log(item,index,suda.indexOf(item), suda.indexOf(item)===index);
+        return suda.indexOf(item)===index;//сравниваем индекс значения и индекс массива, если встречается дубликат то он не попадает в новый массив
+    });
+
+    console.log(opa,'Все различные элементы');
+
+
+    //16-третий массив есть пересечение двух заданых
+
+    var pervo1=[0,1,2,3,4];
+    var pervo2=[-1,1,2,3,5];
+
+
+    console.log(pervo1, pervo2);
+
+    for (var i=0;i<pervo2.length;i++){
+        pervo1.push(pervo2[i]);
+    }
+    console.log(pervo1);
+
+    var pervoResult= pervo1.filter((item,index)=>{
+      return pervo1.indexOf(item)!==index;
+    });
+    console.log(pervoResult,'Пересечение');
+
+    //17-сколько различных чисел в заданном массиве
+    var topchik=[1,2,3,4,5,6,7,1,2,3,4];
+    var counterChisel=0;
+    topchik.sort();
+    console.log(topchik);
+    for (var i=0;i<topchik.length;i++){
+        if (topchik[i]!==topchik[i+1]){
+            counterChisel++;
+        }
+    }
+    console.log('Всего элементов: ' + topchik.length);
+    console.log('В массиве разных чисел: '+counterChisel);
+
+
+    //18- Напишите функцию, которая для заданного массива целых чисел определяет длину 
+    // К самой длинной "пилообразной" последовательности идущих подряд чисел: 
+    // Последовательность a1, a2, a3, … , an­1, an называется пилообразной, если она  удовлетворяет одному 
+    // из следующих условий:  1) a1 < a2 > a3 < … > an­1 < an 
+    //                        2) a1 > a2 < a3 > … < an­1 > an 
+
+
+    //19- Напишите функцию, который для заданных двух массивов X из п элементов и У из k 
+    // элементов определяет, существуют ли одинаковые подряд идущие элементы.
+/*
+    function searcherSame(pusto){
+        for (var i=0;i<pusto.length;i++){
+            for (var j=i+1;j<pusto.length;j++){
+                if ((pusto[i]===pusto[j])&&(i===j-1)){
+                    console.log('Существует повторяющийся элемент идущий подряд это: '+pusto[i]);
+                }
+            }
+        }
+    };
+
+    var choise=prompt('Выберете массив Х или У?');
+    if (choise==='X'){
+
+        var n = prompt('Введите количество эллементов X массива.');
+        var pusto=[];
+        for (var i=0;i<n;i++){
+            var elementX=prompt('Введите эллемент массива X.');
+            pusto.push(elementX);
+        }
+        console.log(pusto);
+        searcherSame(pusto);
+
+    }else if (choise==='Y'){
+
+        var k = prompt('Введите количество эллементов Y массива.');
+        var pusto1=[];
+        for (var i=0;i<k;i++){
+            var elementY=prompt('Введите эллемент массива Y.');
+            pusto1.push(elementY);
+        }
+        console.log(pusto1);
+        searcherSame(pusto1);
+    }
+
+ */
+
+
+
+
+
+
+    //20- Дан массив чисел размерностью 10 элементов. Написать функцию, которая  сортирует массив по возрастанию или по убыванию, 
+    // в зависимости от третьего  параметра функции. Если он равен 1, сортировка идет по убыванию, если 0, то по 
+    // возрастанию. Первые 2 параметра функции ­ это массив и его размер, третий параметр  по умолчанию равен 1.
+
+    var massive=[2,-3,-5,4,7,2,9,0,45,7];
+
+    function sortirovshik(array,arrayLength,verhNiz) {
+        if (verhNiz===1){
+
+            for (let i=0, l=arrayLength, k=l-1;i<k;i++){
+                let indexMin=i;
+
+                for (let j=i+1;j<l;j++){
+                    if (array[indexMin]>array[j]){
+                        indexMin=j;
+                    }
+                }
+                if (indexMin!==i){
+                    [array[i],array[indexMin]]=[array[indexMin],array[i]];
+                }
+            }
+            return array;
+
+        }
+        else if (verhNiz===0){
+            for (let i=0, l=arrayLength, k=l-1;i<k;i++){
+                let indexMax=i;
+
+                for (let j=i+1;j<l;j++){
+                    if (array[indexMax]<array[j]){
+                        indexMax=j;
+                    }
+                }
+                if (indexMax!==i){
+                    [array[i],array[indexMax]]=[array[indexMax],array[i]];
+                }
+            }
+            return array;
+        }
+    };
+
+    var suport=sortirovshik(massive, massive.length, 1);
+
+    console.log(suport);
+
+    var suport1=sortirovshik(massive, massive.length, 0);
+
+    console.log(suport1);
+
+
+    //23- Дан массив случайных чисел в диапазоне от ­20 до +20. Необходимо найти позиции 
+    // крайних отрицательных элементов(самого левого отрицательного элемента 
+    // и самого  правого отрицательного элемента) и отсортировать элементы, находящиеся между  ними.
+
+    var chisla= Math.floor(Math.random() * (20 - (-20) + 1)) + (-20);
+    console.log(chisla);
+</script>
+</body>
+</html>
