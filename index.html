@@ -139,6 +139,7 @@ let arrtop=[];
     }
 */
 //1-вывести массив наоборот
+    console.log('1 Задание');
     var array=[1,2,3,4,5,6,7,8,9,10];
 
     function count() {
@@ -146,8 +147,9 @@ let arrtop=[];
     }
     count();
     console.log('Обратный массив: '+array);
-    
+
 //2- поиск эллемента в массиве повторяющеегося два и более раз и вывести его
+    console.log('2 Задание');
     var array1=[2,4,5,6,787,3,2,3,4,5,6,7,3,4,5,6];
 
     function same(array1) {
@@ -175,6 +177,7 @@ let arrtop=[];
     console.log(same(array1));
 
 //3- поиск самого маленького нечетного числа и вывод
+    console.log('3 Задание');
     var a = [100,61,2,67,-30,12,-77,100,126,-102,6];
     var b=[];
 
@@ -193,6 +196,7 @@ let arrtop=[];
 
 
     //4- среднего аррифметического значения
+    console.log('4 Задание');
     var c=[1,2,3,4,5,6,7,8,9,10];
     var summa=0;
     var dlinna=c.length;
@@ -205,6 +209,7 @@ let arrtop=[];
 
 
     //5/6 число положительных/отрицательных эллементов массива
+    console.log('5/6 Задание');
     var o=[1,9,8,7,65,-3,-5,-8,4,5,6,0];
     var counterPlus=0;
     var summaryPlus=0;
@@ -227,6 +232,7 @@ var counterMinus=0;
     console.log('Сумма отрицательных элементов массива: '+summaryMinus);
 
     //7-число минимальных эллементов
+    console.log('7 Задание');
     var p=[100,2,3,4,5,3,2,1,3,5,7,8,9,-3,-3,5,4,123];
     var counterMinEl=0;
     var miniElement=p[0];
@@ -247,6 +253,7 @@ console.log('Количество миннимальных эллементов:
     console.log('Сумма минимальных элементов массива: '+summaryMinEl);
 
 //8-число элементов кратных 7
+    console.log('8 Задание');
     var t=[1,2,3,45,6,7,8,9,3,5,6,7,45,76,7,8,49,0];
     var counterSeven=0;
     var summarySeven=0;
@@ -260,7 +267,7 @@ console.log('Количество миннимальных эллементов:
     console.log('Сумма кратных 7  элементов массива: '+summarySeven);
 
     //9- индекс последнего минимального значения
-
+    console.log('9 Задание');
     var y=[99,2,3,4,5,6,7,4,-2,3,34,5,63,-1,-2,5,3,-2,3,3,3];
     var lastIndexNumber;
     var minimalElement=y[0];
@@ -274,7 +281,8 @@ console.log('Количество миннимальных эллементов:
     console.log('Минимальный элемент массива: '+minimalElement);
     console.log('Индекс минимального значения массива: '+lastIndexNumber);
 
-    //10-индекс первого максимального значения
+    //10-индекс первого максимального значения\
+    console.log('10 Задание');
 
     var mArray=[1,2,10,3,4,5,10,2,3,4,10];
     var firstIndexNumber;
@@ -290,6 +298,7 @@ console.log('Количество миннимальных эллементов:
     console.log('Индекс максимального значения в массиве: ' + firstIndexNumber);
 
     //11-число элементов одномерного массива совпадающих с заданным массивом
+    console.log('11 Задание');
     var firstArray=[1,2,3,4,5,6,7,8,9];
     var secondArray=[1,0,11,2,22,7,33,44,55];
     var counterSameArray=0;
@@ -309,6 +318,7 @@ console.log('Количество миннимальных эллементов:
     console.log('Сумма совпадающих эллементов: '+summarySameArray);
 
     //12-есть ли в массиве эллементы значения которых совпадают
+    console.log('12 Задание');
 
     var arr = [1,2,3,4,5,6,7,8,9,1];
     function duplicate_values(arr)
@@ -340,6 +350,7 @@ console.log('Количество миннимальных эллементов:
 
 
     //13-все ли эллементы массива различны
+    console.log('13 Задание');
     var massiv=[1,2,3,4,5,6,7,81];
 
     function sortir() {
@@ -359,6 +370,7 @@ console.log('Количество миннимальных эллементов:
 
 
     //14- максимальную по длине неубывающую  последовательность
+    console.log('14 Задание');
 
     var arr = [1,2,3,4,5,0,7,8,9,10,0,1,2,10,20,1,2,3,4,5,6,7,5,4,3,2,1,3,5,6,8,8];
     function max_sequence(arr) {
@@ -387,6 +399,7 @@ console.log('Количество миннимальных эллементов:
 
 
     //15-обьеденить два упорядоченных массива таким образом чтоб в результирующем массиве все эллементы были различны
+    console.log('15 Задание');
     var odin=[1,2,1];
     var dva=[1,2,3];
     var suda=[];
@@ -413,24 +426,23 @@ console.log('Количество миннимальных эллементов:
 
 
     //16-третий массив есть пересечение двух заданых
+    console.log('16 Задание');
 
     var pervo1=[0,1,2,3,4];
     var pervo2=[-1,1,2,3,5];
-
-
+    var resultPeresechenie=[];
     console.log(pervo1, pervo2);
-
-    for (var i=0;i<pervo2.length;i++){
-        pervo1.push(pervo2[i]);
-    }
-    console.log(pervo1);
-
-    var pervoResult= pervo1.filter((item,index)=>{
-      return pervo1.indexOf(item)!==index;
-    });
-    console.log(pervoResult,'Пересечение');
+    for (var  i = 0; i<pervo1.length;i++){
+       for (var j=0; j<pervo2.length;j++ ){
+           if (pervo1[i]===pervo2[j]){
+               resultPeresechenie.push(pervo2[j]);
+           }
+       }
+   }
+    console.log(resultPeresechenie+' Пересечение');
 
     //17-сколько различных чисел в заданном массиве
+    console.log('17 Задание');
     var topchik=[1,2,3,4,5,6,7,1,2,3,4];
     var counterChisel=0;
     topchik.sort();
@@ -449,46 +461,50 @@ console.log('Количество миннимальных эллементов:
     // Последовательность a1, a2, a3, … , an­1, an называется пилообразной, если она  удовлетворяет одному 
     // из следующих условий:  1) a1 < a2 > a3 < … > an­1 < an 
     //                        2) a1 > a2 < a3 > … < an­1 > an 
+    console.log('18 Задание');
+
+
 
 
     //19- Напишите функцию, который для заданных двух массивов X из п элементов и У из k 
     // элементов определяет, существуют ли одинаковые подряд идущие элементы.
-/*
-    function searcherSame(pusto){
-        for (var i=0;i<pusto.length;i++){
-            for (var j=i+1;j<pusto.length;j++){
-                if ((pusto[i]===pusto[j])&&(i===j-1)){
-                    console.log('Существует повторяющийся элемент идущий подряд это: '+pusto[i]);
-                }
-            }
-        }
-    };
+//
+// console.log('19 Задание');
+//     function searcherSame(pusto){
+//         for (var i=0;i<pusto.length;i++){
+//             for (var j=i+1;j<pusto.length;j++){
+//                 if ((pusto[i]===pusto[j])&&(i===j-1)){
+//                     console.log('Существует повторяющийся элемент идущий подряд это: '+pusto[i]);
+//                 }
+//             }
+//         }
+//     };
+//
+//     var choise=prompt('Выберете массив Х или У?');
+//     if (choise==='X'){
+//
+//         var n = prompt('Введите количество эллементов X массива.');
+//         var pusto=[];
+//         for (var i=0;i<n;i++){
+//             var elementX=prompt('Введите эллемент массива X.');
+//             pusto.push(elementX);
+//         }
+//         console.log(pusto);
+//         searcherSame(pusto);
+//
+//     }else if (choise==='Y'){
+//
+//         var k = prompt('Введите количество эллементов Y массива.');
+//         var pusto1=[];
+//         for (var i=0;i<k;i++){
+//             var elementY=prompt('Введите эллемент массива Y.');
+//             pusto1.push(elementY);
+//         }
+//         console.log(pusto1);
+//         searcherSame(pusto1);
+//     }
 
-    var choise=prompt('Выберете массив Х или У?');
-    if (choise==='X'){
 
-        var n = prompt('Введите количество эллементов X массива.');
-        var pusto=[];
-        for (var i=0;i<n;i++){
-            var elementX=prompt('Введите эллемент массива X.');
-            pusto.push(elementX);
-        }
-        console.log(pusto);
-        searcherSame(pusto);
-
-    }else if (choise==='Y'){
-
-        var k = prompt('Введите количество эллементов Y массива.');
-        var pusto1=[];
-        for (var i=0;i<k;i++){
-            var elementY=prompt('Введите эллемент массива Y.');
-            pusto1.push(elementY);
-        }
-        console.log(pusto1);
-        searcherSame(pusto1);
-    }
-
- */
 
 
 
@@ -498,7 +514,7 @@ console.log('Количество миннимальных эллементов:
     //20- Дан массив чисел размерностью 10 элементов. Написать функцию, которая  сортирует массив по возрастанию или по убыванию, 
     // в зависимости от третьего  параметра функции. Если он равен 1, сортировка идет по убыванию, если 0, то по 
     // возрастанию. Первые 2 параметра функции ­ это массив и его размер, третий параметр  по умолчанию равен 1.
-
+    console.log('20 Задание');
     var massive=[2,-3,-5,4,7,2,9,0,45,7];
 
     function sortirovshik(array,arrayLength,verhNiz) {
@@ -545,12 +561,103 @@ console.log('Количество миннимальных эллементов:
     console.log(suport1);
 
 
-    //23- Дан массив случайных чисел в диапазоне от ­20 до +20. Необходимо найти позиции 
+    //21- Дан массив случайных чисел в диапазоне от ­20 до +20. Необходимо найти позиции 
     // крайних отрицательных элементов(самого левого отрицательного элемента 
     // и самого  правого отрицательного элемента) и отсортировать элементы, находящиеся между  ними.
+    console.log('21 Задание');
+var n=0;
+var specArray=[];
+var firstNegIndex;
+var lastNegIndex;
+while (n<=41){
+    var chisla= Math.floor(Math.random() * (20 +20 + 1)) -20;
+    specArray.push(chisla);
+    n++;
+}
+    console.log(specArray);
 
-    var chisla= Math.floor(Math.random() * (20 - (-20) + 1)) + (-20);
-    console.log(chisla);
+for (let i=0;i<specArray.length;i++){
+    if (specArray[i] < 0){
+        console.log('Крайнее левое отрицательное число: '+specArray[i]);
+        firstNegIndex=i;
+        break;
+    }
+}
+for (let i = specArray.length; i>=0 ;i--){
+    if (specArray[i]<0){
+        console.log('Крайнее правое отрицательное число: '+specArray[i]);
+        lastNegIndex = i;
+        break;
+    }
+}
+    console.log(firstNegIndex, lastNegIndex);
+let nerreq =  specArray.slice(firstNegIndex+1,lastNegIndex);
+nerreq.sort(function (a,b) {
+return a-b;
+    });
+    nerreq.unshift(specArray[firstNegIndex]);
+    nerreq.push(specArray[lastNegIndex]);
+    console.log(nerreq);
+
+
+
+
+    //22-Дан массив из 20 целых чисел со значениями от 1 до 20.
+    // Необходимо:
+    //     ○ написать функцию, разбрасывающую элементы массива произвольным
+    // образом; ^^done^^
+    // ○ создать случайное число из того же диапазона и найти позицию этого
+    // случайного числа в массиве; ^^done^^
+    // ○ отсортировать элементы массива, находящиеся слева от найденной
+    // позиции по убыванию, а элементы массива, находящиеся справа от
+    // найденной позиции по возрастанию. ^^done^^
+    console.log('22 Задание');
+    var pustoiRandom =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    console.log(pustoiRandom);
+    let randomNum=0;
+var superSlot = [];
+    function randomizer(array){
+        randomNum = Math.floor(Math.random() * (20))+1;
+        array.push(randomNum);
+        for (let i=0; i<array.length;i++){
+
+            var randomIndex = Math.floor(Math.random() * (20 + 1));
+
+            [array[i],array[randomIndex]] = [array[randomIndex],array[i]];
+        }
+    };
+    randomizer(pustoiRandom);
+
+    console.log(pustoiRandom);
+    let indexOfrand = pustoiRandom.indexOf(randomNum);
+    console.log(indexOfrand);
+
+    let firstIndexElem = pustoiRandom.indexOf(pustoiRandom[0]);
+let lastIndexElem = pustoiRandom.indexOf(pustoiRandom[pustoiRandom.length-1]);
+    let newArryLeft = pustoiRandom.slice(firstIndexElem,indexOfrand);
+
+    newArryLeft.sort(function (a,b) {
+return b-a;
+    });
+
+    console.log(newArryLeft);
+
+    let newArryRight = pustoiRandom.slice(indexOfrand+1,lastIndexElem+1);
+
+    newArryRight.sort(function (a,b) {
+return a-b;
+    });
+    console.log(newArryRight);
+
+    for (let i=0;i<newArryLeft.length;i++){
+        superSlot.push(newArryLeft[i]);
+    }
+    superSlot.push(randomNum);
+    for (let i=0;i<newArryRight.length;i++){
+        superSlot.push(newArryRight[i]);
+    }
+    console.log(superSlot);
+
 </script>
 </body>
 </html>
